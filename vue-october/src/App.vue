@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import Sign from './components/Sign.vue'
-import Shelves from './components/Shelves.vue'
-import TextBox from './components/TextBox.vue'
+import Sign from './components/Sign.vue';
+import Shelves from './components/Shelves.vue';
+import TextBox from './components/TextBox.vue';
 
 export default {
   name: 'App',

@@ -7,9 +7,7 @@
 <script>
 export default {
   name: 'TextBox',
-  props: {
-  
-  }
+  baseText: "",
 }
 </script>
 

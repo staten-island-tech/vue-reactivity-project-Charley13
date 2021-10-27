@@ -4,7 +4,7 @@
       <li class="help" v-for="object in objects" :key="object.image">{{object.image}}</li>
     </ul> -->
     <div v-for="object in objects" :key="object.image">
-          <img class="help" :src="object.image" />
+          <img class="help" :src="object.image" @click="moreInformation"/>
     </div>
   </div>
 </template>
@@ -39,6 +39,11 @@ export default {
           image: witch,
         },
       ]
+    }
+  },
+  methods: {
+    moreInformation(){
+   //uhhhhh run a series of text? In box? Based on the object you clicked?
     }
   }
 }
