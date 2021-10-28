@@ -4,7 +4,7 @@
       <li class="help" v-for="object in objects" :key="object.image">{{object.image}}</li>
     </ul> -->
     <div v-for="object in objects" :key="object.image">
-          <img class="help" :src="object.image" @click="moreInformation"/>
+          <img class="images" :src="object.image" @click="moreInformation"/>
     </div>
   </div>
 </template>
@@ -25,26 +25,32 @@ export default {
         {
           name: "Key",
           image: key,
+          information: "RANDOM NONSENSE FOR NOW FOR TESTING",
         },
         {
           name: "Pumpkin",
           image: pumpkin,
+          information: "THYTJFUYKIUOPP;FCHST546W45YGSFGHFGHFGH",
         },
          {
           name: "Planets",
           image: planets,
+          information: "UTYIYUKGKDTFGHSERTSERTESRTERTESRTERTERRTTRTSTRSSRRSSSEHMNJHKYUK",
         },
         {
           name: "Witch hat",
           image: witch,
+          information: "YTJYJYTJ",
         },
       ]
     }
   },
   methods: {
     moreInformation(){
-   //uhhhhh run a series of text? In box? Based on the object you clicked?
+//information overlay over object
     }
+    //some functionality to add object to "cart", but you have to upload something in exchange
+    //you're able to look at cart on a different page ... maybe a small button/icon appears in bottom right when you do the exchange
   }
 }
 </script>
@@ -57,7 +63,7 @@ export default {
         justify-content: center;
         align-items: center;
 }
-.help{
+.images{
   height: 10rem;
   margin: 5rem 4rem;
 }

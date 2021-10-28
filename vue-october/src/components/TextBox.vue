@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="textbox">
    
   </div>
 </template>
@@ -12,7 +12,7 @@ export default {
 </script>
 
 <style scoped>
-.hello{
+.textbox{
   height: 18rem;
   width: 80rem;
   border: 0.4rem solid white;
