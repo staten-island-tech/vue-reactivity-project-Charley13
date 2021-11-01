@@ -5,6 +5,11 @@
     </ul> -->
     <div v-for="object in objects" :key="object.image">
           <img class="images" :src="object.image" @click="moreInformation"/>
+          <div class="info-box">
+            <h2 class="name" :src="object.name"></h2>
+            <p class="description"></p>
+            <button class="add"></button>
+          </div>
     </div>
   </div>
 </template>
@@ -61,10 +66,19 @@ export default {
         margin: 0 auto;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: center; 
 }
 .images{
   height: 10rem;
-  margin: 5rem 4rem;
+  margin: 5rem 4rem 0 4rem;
 }
+.info-box{
+  height: 20rem;
+  background-color: red;
+}
+.name{
+  font-size: 5rem;
+  color: white;
+  text-align: center;
+} 
 </style>
