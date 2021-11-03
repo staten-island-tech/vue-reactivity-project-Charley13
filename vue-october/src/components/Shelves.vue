@@ -5,10 +5,10 @@
     </ul> -->
     <div v-for="object in objects" :key="object.image" >
           <img class="images" :src="object.image" @click="moreInformation"/>
-          <div class="info-box">
+          <div class="info-box" v-show="isClicked">
             <div class="info-inner" >
-            <h2 class="name" >{{name}}</h2>
-            <p class="description"></p>
+            <h2 class="name">{{object.name}}</h2>
+            <p class="description">{{object.information}}</p>
             <div class="button-div">
             <button class="add">Add Item</button>
             </div>
@@ -30,6 +30,7 @@ export default {
   },
   data(){
     return{
+      isClicked: false,
       objects: [
         {
           name: "Key",
@@ -39,12 +40,12 @@ export default {
         {
           name: "Pumpkin",
           image: pumpkin,
-          information: "THYTJFUYKIUOPP;FCHST546W45YGSFGHFGHFGH",
+          information: "Alright so it wasn't a good idea to keyboard smash in here for testing purposes.",
         },
          {
           name: "Planets",
           image: planets,
-          information: "UTYIYUKGKDTFGHSERTSERTESRTERTESRTERTERRTTRTSTRSSRRSSSEHMNJHKYUK",
+          information: "I want chocolateee.",
         },
         {
           name: "Witch hat",
@@ -57,6 +58,7 @@ export default {
   methods: {
     moreInformation(){
 //information overlay over object
+this.isClicked = true;
     }
     //some functionality to add object to "cart", but you have to upload something in exchange
     //you're able to look at cart on a different page ... maybe a small button/icon appears in bottom right when you do the exchange
@@ -106,13 +108,15 @@ export default {
   justify-content: end;
 }
 .name{
-  height: 3rem;
+  font-size: 1.5rem;
   background-color: aliceblue;
   margin-bottom: 1rem;
   margin-top: 0.5rem;
+  text-align: center;
 }
 .description{
-  height: 6rem;
+  font-size: 1rem;
+  height: 7.5rem;
   background-color: pink;
     margin: 0;
     margin-bottom: 1rem;
