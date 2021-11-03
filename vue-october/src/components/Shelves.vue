@@ -3,12 +3,16 @@
     <!-- <ul>
       <li class="help" v-for="object in objects" :key="object.image">{{object.image}}</li>
     </ul> -->
-    <div v-for="object in objects" :key="object.image">
+    <div v-for="object in objects" :key="object.image" >
           <img class="images" :src="object.image" @click="moreInformation"/>
           <div class="info-box">
-            <h2 class="name" :src="object.name"></h2>
+            <div class="info-inner" >
+            <h2 class="name" >{{name}}</h2>
             <p class="description"></p>
-            <button class="add"></button>
+            <div class="button-div">
+            <button class="add">Add Item</button>
+            </div>
+            </div>
           </div>
     </div>
   </div>
@@ -62,23 +66,58 @@ export default {
 
 <style scoped>
 .shelves{
-    height: auto;
         margin: 0 auto;
-        display: flex;
-        justify-content: center;
+         display: flex;
+        justify-content: space-around;
         align-items: center; 
+        position: relative; 
+        height: 20rem;
+        width: 100%;
 }
 .images{
-  height: 10rem;
-  margin: 5rem 4rem 0 4rem;
+  height: 100%;
+  width: 12rem;
+  position: absolute;
+  top: 0;
+  /* margin: 5rem 4rem 0 4rem; */
 }
 .info-box{
-  height: 20rem;
-  background-color: red;
+  height: 17rem;
+  width: 12rem;
+  top: 0;
+  margin-top: 2rem;
+    background-color: red; 
+    border-radius: 0.4rem; 
+  position: absolute;
+  display: flex;
+}
+.info-inner{
+  height: 80%;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  background-color: blue;
+   border-radius: 0.4rem; 
+}
+.button-div{
+  display: flex;
+  justify-content: end;
 }
 .name{
-  font-size: 5rem;
-  color: white;
-  text-align: center;
-} 
+  height: 3rem;
+  background-color: aliceblue;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+.description{
+  height: 6rem;
+  background-color: pink;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+.add{
+  margin-right: 0.5rem;
+}
 </style>

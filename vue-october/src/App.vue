@@ -28,6 +28,7 @@ html,body{
 #app{
   /* background-image: url('./assets/background.svg'); */
   background-color: black;
-  height: 100vh;
+  height: 175vh;
+  overflow: hidden;
 }
 </style>
