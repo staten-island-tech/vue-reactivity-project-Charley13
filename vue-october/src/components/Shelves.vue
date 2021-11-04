@@ -1,8 +1,5 @@
 <template>
   <div class="shelves">
-    <!-- <ul>
-      <li class="help" v-for="object in objects" :key="object.image">{{object.image}}</li>
-    </ul> -->
     <div v-for="object in objects" :key="object.image" >
           <img class="images" :src="object.image" @click="moreInformation"/>
           <div class="info-box" v-show="isClicked">
@@ -68,10 +65,8 @@ this.isClicked = true;
 
 <style scoped>
 .shelves{
-        margin: 0 auto;
          display: flex;
         justify-content: space-around;
-        align-items: center; 
         position: relative; 
         height: 20rem;
         width: 100%;
@@ -88,7 +83,7 @@ this.isClicked = true;
   width: 12rem;
   top: 0;
   margin-top: 2rem;
-    background-color: red; 
+    background-color:rgb(128, 56, 15); 
     border-radius: 0.4rem; 
   position: absolute;
   display: flex;
@@ -100,7 +95,7 @@ this.isClicked = true;
   display: flex;
   flex-direction: column;
   align-content: center;
-  background-color: blue;
+  background-color: rgb(209, 109, 70);
    border-radius: 0.4rem; 
 }
 .button-div{
@@ -109,16 +104,15 @@ this.isClicked = true;
 }
 .name{
   font-size: 1.5rem;
-  background-color: aliceblue;
   margin-bottom: 1rem;
   margin-top: 0.5rem;
-  text-align: center;
+  margin-left: 0.5rem;
+  /* text-align: center; */
 }
 .description{
   font-size: 1rem;
   height: 7.5rem;
-  background-color: pink;
-    margin: 0;
+    margin: 0 0.5rem;
     margin-bottom: 1rem;
 }
 .add{
