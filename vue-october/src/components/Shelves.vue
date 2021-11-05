@@ -18,10 +18,10 @@
 
 <script>
 import Items from './Items.vue';
-import key from "../assets/skeletonKey.svg"
-import planets from "../assets/planets.svg"
-import pumpkin from "../assets/pumpkin.svg"
-import witch from "../assets/witch.svg"
+// import key from "../assets/skeletonKey.svg"
+// import planets from "../assets/planets.svg"
+// import pumpkin from "../assets/pumpkin.svg"
+// import witch from "../assets/witch.svg"
 export default {
   name: 'Shelves',
   components: {
