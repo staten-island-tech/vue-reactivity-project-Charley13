@@ -1,6 +1,6 @@
 <template>
   <div class="shelves">
-    <div v-for="object in objects" :key="object.image" >
+    <!-- <div v-for="object in objects" :key="object.image" >
           <img class="images" :src="object.image" @click="moreInformation"/>
           <div class="info-box" v-show="isClicked">
             <div class="info-inner" >
@@ -11,19 +11,21 @@
             </div>
             </div>
           </div>
-    </div>
+    </div> -->
+    <Items/>
   </div>
 </template>
 
 <script>
+import Items from './Items.vue';
 import key from "../assets/skeletonKey.svg"
 import planets from "../assets/planets.svg"
 import pumpkin from "../assets/pumpkin.svg"
 import witch from "../assets/witch.svg"
 export default {
   name: 'Shelves',
-  props: {
-  
+  components: {
+  Items,
   },
   data(){
     return{
