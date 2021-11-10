@@ -1,6 +1,7 @@
 <template>
   <div class="item">
 <img class="images" @click="moreInformation"/>
+<slot></slot>
 <div class="info-box" v-show="isClicked">
             <div class="info-inner" >
             <h2 class="name">{{object.name}}</h2>
@@ -14,10 +15,10 @@
 </template>
 
 <script>
-import key from "../assets/skeletonKey.svg"
-import planets from "../assets/planets.svg"
-import pumpkin from "../assets/pumpkin.svg"
-import witch from "../assets/witch.svg"
+// import key from "../assets/skeletonKey.svg"
+// import planets from "../assets/planets.svg"
+// import pumpkin from "../assets/pumpkin.svg"
+// import witch from "../assets/witch.svg"
 export default {
 name: "Items",
   data(){

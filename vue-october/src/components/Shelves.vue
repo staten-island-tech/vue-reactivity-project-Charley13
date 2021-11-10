@@ -12,7 +12,7 @@
             </div>
           </div>
     </div> -->
-    <Items/>
+    <Items slot="hi"/>
   </div>
 </template>
 
