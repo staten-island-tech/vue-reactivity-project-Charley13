@@ -5,35 +5,34 @@
      <ul class="list">
      <li id="list-item"> 
          <input class="text-input"/>
-       <input @click="counter+=1,addMushroom" class="checkbox" type="checkbox">
+       <input @click="addMushroom" class="checkbox" type="checkbox">
        </li> 
        <li id="list-item"> 
          <input class="text-input"/>
-       <input @click="counter+=1, addMushroom" class="checkbox" type="checkbox">
+       <input @click=" addMushroom" class="checkbox" type="checkbox">
        </li> 
        <li id="list-item"> 
          <input class="text-input"/>
-       <input @click="counter+=1, addMushroom" class="checkbox" type="checkbox">
+       <input @click="addMushroom" class="checkbox" type="checkbox">
        </li> 
        <li id="list-item"> 
          <input class="text-input"/>
-       <input @click="counter+=1, addMushroom" class="checkbox" type="checkbox">
+       <input @click="addMushroom" class="checkbox" type="checkbox">
        </li> 
        <li id="list-item"> 
          <input class="text-input"/>
-       <input @click="counter+=1, addMushroom" class="checkbox" type="checkbox">
+       <input @click="addMushroom" class="checkbox" type="checkbox">
        </li> 
      </ul>
    </div>
   <div class="box finished-box">
      <h4 class="box-title finished-title">Tasks Completed: {{counter}}</h4>
    </div>
-   <div class="mushroom-box">
-     <img v-show="counter===1" src="../assets/mushroom.png" class="mushroom-img">
-     <img v-show="counter===2" src="../assets/mushroom.png" class="mushroom-img">
-     <img v-show="counter===3" src="../assets/mushroom.png" class="mushroom-img">
-     <img v-show="counter===4" src="../assets/mushroom.png" class="mushroom-img">
-     <img v-show="counter===5" src="../assets/mushroom.png" class="mushroom-img">
+   <div class="mushroom-overall">
+   <div class="mushroom-box" v-for="musrhoom in musrhooms" :key="musrhoom">
+      <!-- add mushroom picture to array to generate mushrooms, el can just be 2, 2 items => 2 mushrooms -->
+     <img src="../assets/mushroom.png" class="mushroom-img">
+   </div>
    </div>
  </div>
 </template>
@@ -49,17 +48,15 @@ export default {
   data(){
     return{
       counter: 0, 
-      counterNumber: false,
+      musrhooms: [],
     }
   }, 
-//   methods: {
-// addMushroom(){
-// if(counter = 1){
-//   counterNumber = true;
-// }
-// }
-//   }
-
+  methods: {
+     addMushroom(){
+       this.counter++;
+       this.musrhooms.push(this.counter);
+     }
+  }
 }
 </script>
 
@@ -94,16 +91,25 @@ export default {
   width: 1rem;
   height: 1rem;
 }
-.mushroom-box{
+.mushroom-overall{
+  display: flex;
+  flex-direction: row;
   position: absolute;
-  bottom: 10rem;
-  left: 30rem;
-  height: 5rem;
-  width: 30rem;
+width: 100%;
+justify-content: center;
+bottom: 0;
+}
+.mushroom-box{
+/* margin: auto; */
+/* position: absolute;
+bottom: 0;
+width: 100%; */
+display: flex;
+justify-content: space-between;
 }
 .mushroom-img{
   width: 4rem;
   height: 6rem;
-  margin-right: 2rem;
+  margin-left: 2rem;
 }
 </style>

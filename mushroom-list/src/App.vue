@@ -15,12 +15,13 @@
 
 <script>
 import ToDo from './components/ToDo.vue'
-import FinishedBox from "./components/FinishedBox.vue"
+// import FinishedBox from "./components/FinishedBox.vue"
 
 export default {
   name: 'App',
   components: {
-     ToDo, FinishedBox
+     ToDo, 
+    //  FinishedBox
   }
 }
 </script>
@@ -36,7 +37,8 @@ html,body{
   width: 100vw;
    height: 100vh;  
   background-image: url(./assets/background.jpg);
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .heading-box{
   width: 100%;
