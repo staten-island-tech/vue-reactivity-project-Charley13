@@ -30,10 +30,10 @@
    </div>
    <div class="mushroom-box">
      <img v-show="counter===1" src="../assets/mushroom.png" class="mushroom-img">
-      <img v-show="counter===2" src="../assets/mushroom.png" class="mushroom-img">
-       <img v-show="counter===3" src="../assets/mushroom.png" class="mushroom-img">
-        <img v-show="counter===4" src="../assets/mushroom.png" class="mushroom-img">
-         <img v-show="counter===5" src="../assets/mushroom.png" class="mushroom-img">
+     <img v-show="counter===2" src="../assets/mushroom.png" class="mushroom-img">
+     <img v-show="counter===3" src="../assets/mushroom.png" class="mushroom-img">
+     <img v-show="counter===4" src="../assets/mushroom.png" class="mushroom-img">
+     <img v-show="counter===5" src="../assets/mushroom.png" class="mushroom-img">
    </div>
  </div>
 </template>
@@ -104,5 +104,6 @@ export default {
 .mushroom-img{
   width: 4rem;
   height: 6rem;
+  margin-right: 2rem;
 }
 </style>
