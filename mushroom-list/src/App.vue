@@ -5,18 +5,22 @@
    <h1 class="heading app-title">Mushroom List</h1>
    <h2 class="heading app-subtitle">Complete tasks to add mushrooms + create a beautiful garden!</h2>
    </div>
+   <div class="boxes">
    <ToDo />
+   <FinishedBox />
+   </div>
 <iframe class="video" width="150" height="100" src="https://www.youtube.com/embed/tBDVLey1DIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
  </div>
 </template>
 
 <script>
 import ToDo from './components/ToDo.vue'
+import FinishedBox from "./components/FinishedBox.vue"
 
 export default {
   name: 'App',
   components: {
-     ToDo
+     ToDo, FinishedBox
   }
 }
 </script>
@@ -58,5 +62,24 @@ flex-direction: column;
  position: absolute;
  right: 1rem;
  top: 1rem;
+}
+.boxes{
+   width: 100%;
+  display: flex;
+}
+.box{
+  width: 20rem;
+  height: 13rem;
+  border: white solid 0.1rem;
+  border-radius: .3rem;
+  margin-top: 3rem;
+  background-color: #ffe3c6;
+}
+.to-do-box{
+  margin-left: 4rem;
+}
+.finished-box{
+  position: absolute;
+  right: 4rem;
 }
 </style>

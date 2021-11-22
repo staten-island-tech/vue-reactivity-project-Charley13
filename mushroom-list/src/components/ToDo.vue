@@ -10,11 +10,7 @@
           <ListItem />
      </ul>
    </div>
-   <div class=" box finished-box">
-     <h3 class="box-title">Finished Box:</h3>
-     <ul class="populate">
-     </ul>
-   </div>
+
  </div>
 </template>
 
@@ -24,7 +20,8 @@ export default {
   name: 'ToDo', 
   components: {
     ListItem,
-  }
+  },
+
 }
 </script>
 
@@ -32,21 +29,6 @@ export default {
 .to-do-overall{
   width: 100%;
   display: flex;
-}
-.box{
-  width: 20rem;
-  height: 13rem;
-  border: white solid 0.1rem;
-  border-radius: .3rem;
-  margin-top: 3rem;
-  background-color: #ffe3c6;
-}
-.to-do-box{
-  margin-left: 4rem;
-}
-.finished-box{
-  position: absolute;
-  right: 4rem;
 }
 .box-title{
   margin-top: 0.5rem;
