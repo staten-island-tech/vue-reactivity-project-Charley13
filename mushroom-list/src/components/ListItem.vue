@@ -1,8 +1,8 @@
 <template>
       <li id="list-item"> 
          <input class="text-input"/>
-       <input @click="finished" class="checkbox" type="checkbox">
-       </li>
+       <input @click="addFinished" class="checkbox" type="checkbox">
+       </li> 
 </template>
 
 <script>
@@ -16,7 +16,10 @@ methods: {
            const inputText = element.firstChild.value;
           this.$root.$emit("listItem", inputText)
        });
-    }
+    },
+     addFinished(){
+          this.$root.$emit("counterNumber", counterNumber)
+     }
 }
 }
 </script>

@@ -7,7 +7,7 @@
    </div>
    <div class="boxes">
    <ToDo />
-   <FinishedBox />
+   <!-- <FinishedBox /> -->
    </div>
 <iframe class="video" width="150" height="100" src="https://www.youtube.com/embed/tBDVLey1DIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
  </div>
