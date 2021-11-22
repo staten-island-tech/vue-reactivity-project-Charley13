@@ -3,46 +3,32 @@
    <div class="box to-do-box">
      <h3 class="box-title">To-Do Box:</h3>
      <ul class="list">
-       <li> 
-         <input class="text-input"/>
-       <input @click="finished" class="checkbox" type="checkbox">
-       </li>
-        <li> 
-         <input class="text-input"/>
-      <input @click="finished" class="checkbox" type="checkbox">
-       </li> 
-        <li> 
-         <input class="text-input"/>
-       <input @click="finished" class="checkbox" type="checkbox">
-       </li>
-        <li> 
-         <input class="text-input"/>
-       <input @click="finished" class="checkbox" type="checkbox">
-       </li>
-        <li> 
-         <input class="text-input"/>
-      <input @click="finished" class="checkbox" type="checkbox">
-       </li>
+      <ListItem />
+       <ListItem />
+        <ListItem />
+         <ListItem />
+          <ListItem />
      </ul>
    </div>
    <div class=" box finished-box">
      <h3 class="box-title">Finished Box:</h3>
+     <ul class="populate">
+     </ul>
    </div>
  </div>
 </template>
 
 <script>
+import ListItem from "./ListItem.vue"
 export default {
   name: 'ToDo', 
-  methods: {
-    finished(){
-      
-    }
+  components: {
+    ListItem,
   }
 }
 </script>
 
-<style scoped>
+<style >
 .to-do-overall{
   width: 100%;
   display: flex;
