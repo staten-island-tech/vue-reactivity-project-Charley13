@@ -4,29 +4,32 @@
      <h3 class="box-title">To-Do Box:</h3>
      <ul class="list">
      <li id="list-item"> 
-         <input class="text-input"/>
+         <input class="text-input" />
        <input @click="addMushroom" class="checkbox" type="checkbox">
        </li> 
        <li id="list-item"> 
-         <input class="text-input"/>
+         <input class="text-input" />
        <input @click=" addMushroom" class="checkbox" type="checkbox">
        </li> 
        <li id="list-item"> 
-         <input class="text-input"/>
+         <input class="text-input" />
        <input @click="addMushroom" class="checkbox" type="checkbox">
        </li> 
        <li id="list-item"> 
-         <input class="text-input"/>
+         <input class="text-input" />
        <input @click="addMushroom" class="checkbox" type="checkbox">
        </li> 
        <li id="list-item"> 
-         <input class="text-input"/>
+         <input class="text-input" />
        <input @click="addMushroom" class="checkbox" type="checkbox">
        </li> 
      </ul>
    </div>
   <div class="box finished-box">
      <h4 class="box-title finished-title">Tasks Completed: {{counter}}</h4>
+     <ul class="list-two" v-for="val in newVals" :key="val">
+       <li class="text-input-two" ></li>
+     </ul>
    </div>
    <div class="mushroom-overall">
    <div class="mushroom-box" v-for="musrhoom in musrhooms" :key="musrhoom">
@@ -49,12 +52,22 @@ export default {
     return{
       counter: 0, 
       musrhooms: [],
+      newVals: [],
     }
   }, 
   methods: {
      addMushroom(){
        this.counter++;
        this.musrhooms.push(this.counter);
+      //  const ogLi = document.getElementsByTagName("li");
+      //  const ogLiArray = Array.from(ogLi);
+      //  ogLiArray.forEach(element => {
+         
+      //   const value = element.firstChild.value;
+      //    this.newVals.push(value);
+      //           console.log(value);
+         
+      //  });
      }
   }
 }
@@ -72,12 +85,12 @@ export default {
   text-decoration: underline;
   font-family: 'Indie Flower', cursive;
 }
-.list{
+.list, .list-two{
     margin: 0;
   padding: 0;
   margin-left: 2rem;
 }
-.text-input{
+.text-input, .text-input-two{
   width: 80%;
   height: 10%;
   border: none;
@@ -97,7 +110,7 @@ export default {
   position: absolute;
 width: 100%;
 justify-content: center;
-bottom: 0;
+bottom: 9rem;
 }
 .mushroom-box{
 /* margin: auto; */

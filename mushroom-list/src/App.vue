@@ -37,8 +37,8 @@ html,body{
   width: 100vw;
    height: 100vh;  
   background-image: url(./assets/background.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size: contain;
+  /* background-repeat: no-repeat; */
 }
 .heading-box{
   width: 100%;
