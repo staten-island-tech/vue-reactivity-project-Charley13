@@ -5,23 +5,23 @@
      <ul class="list">
      <li id="list-item"> 
          <input class="text-input" />
-       <input @click="addMushroom" class="checkbox" type="checkbox">
+       <input @click="addMushroom" v-model="checked" class="checkbox" type="checkbox"   >
        </li> 
        <li id="list-item"> 
          <input class="text-input" />
-       <input @click=" addMushroom" class="checkbox" type="checkbox">
+       <input @click=" addMushroom" v-model="checked" class="checkbox" type="checkbox"  >
        </li> 
        <li id="list-item"> 
          <input class="text-input" />
-       <input @click="addMushroom" class="checkbox" type="checkbox">
+       <input @click="addMushroom" v-model="checked" class="checkbox" type="checkbox"  >
        </li> 
        <li id="list-item"> 
          <input class="text-input" />
-       <input @click="addMushroom" class="checkbox" type="checkbox">
+       <input @click="addMushroom" v-model="checked"  class="checkbox" type="checkbox"  >
        </li> 
        <li id="list-item"> 
          <input class="text-input" />
-       <input @click="addMushroom" class="checkbox" type="checkbox">
+       <input @click="addMushroom" v-model="checked"  class="checkbox" type="checkbox"  >
        </li> 
      </ul>
    </div>
@@ -42,7 +42,16 @@
 
 <script>
 // import ListItem from "./ListItem.vue"
-
+// <input
+//   type="checkbox"
+//   v-model="toggle"
+//   true-value="yes"
+//   false-value="no"
+// >
+// // when checked:
+// vm.toggle === 'yes'
+// // when unchecked:
+// vm.toggle === 'no' 
 export default {
   name: 'ToDo', 
   components: {
@@ -53,12 +62,18 @@ export default {
       counter: 0, 
       musrhooms: [],
       newVals: [],
+       checked: false,
     }
   }, 
   methods: {
      addMushroom(){
-       this.counter++;
+       console.log(this.checked)
+  if (this.checked === false)
+  {
+   this.counter++;
        this.musrhooms.push(this.counter);
+  }
+},
       //  const ogLi = document.getElementsByTagName("li");
       //  const ogLiArray = Array.from(ogLi);
       //  ogLiArray.forEach(element => {
@@ -68,7 +83,7 @@ export default {
       //           console.log(value);
          
       //  });
-     }
+     
   }
 }
 </script>
